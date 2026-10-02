@@ -32,5 +32,7 @@ public class Example03 {
                 System.out.println(i + ": " + vect[i]);
             }
         }
+
+        scanner.close();
     }
 }
