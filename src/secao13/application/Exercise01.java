@@ -45,8 +45,12 @@ public class Exercise01 {
             }
         }
 
+        System.out.println();
+        System.out.println("PRICE TAGS:");
         for(Product product : products){
             System.out.println(product.priceTag());
         }
+
+        scanner.close();
     }
 }
