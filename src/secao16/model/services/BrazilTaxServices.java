@@ -1,6 +1,7 @@
 package secao16.model.services;
 
-public class BrazilTaxServices {
+public class BrazilTaxServices implements TaxService {
+
     public double tax(double amount){
         if(amount <= 100){
             return amount * 0.2;
