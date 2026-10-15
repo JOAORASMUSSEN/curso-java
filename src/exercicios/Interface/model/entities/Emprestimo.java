@@ -16,6 +16,12 @@ public class Emprestimo {
     public Emprestimo(){
     }
 
+    public Emprestimo(Usuario usuario, Livro livro, LocalDate dataEmprestimo) {
+        this.usuario = usuario;
+        this.livro = livro;
+        this.dataEmprestimo = dataEmprestimo;
+    }
+
     public Emprestimo(Usuario usuario, Livro livro, LocalDate dataEmprestimo, LocalDate dataDevolucao, LocalDate dataPrevistaDevolucao, Boolean ativo) {
         this.usuario = usuario;
         this.livro = livro;
@@ -65,8 +71,10 @@ public class Emprestimo {
         this.ativo = ativo;
     }
 
-    public void registraDevolução(){
-        setAtivo(true);
+    public void registraDevolucao(LocalDate data) {
+        this.dataDevolucao = data;
+        this.ativo = false;
+        this.livro.devolver();
     }
 
     public LocalDate getDataPrevistaDevolucao() {
@@ -77,18 +85,16 @@ public class Emprestimo {
         this.dataPrevistaDevolucao = dataPrevistaDevolucao;
     }
 
-    public Boolean estaAtrasado(LocalDate dataHoje){
-        if(dataHoje.isAfter(this.dataPrevistaDevolucao)){
-            return false;
-        }
-        return true;
+    public boolean estaAtrasado(LocalDate dataHoje) {
+        return this.ativo
+                && dataHoje.isAfter(this.dataPrevistaDevolucao);
     }
 
-    public long calcularDiasAtraso(LocalDate dataHoje){
-        if(dataHoje.isAfter(dataPrevistaDevolucao)){
-            return ChronoUnit.DAYS.between(dataPrevistaDevolucao, dataHoje);
+    public long calcularDiasAtraso(LocalDate dataHoje) {
+        if (estaAtrasado(dataHoje)) {
+            return ChronoUnit.DAYS.between(
+                    dataPrevistaDevolucao, dataHoje);
         }
         return 0;
     }
-
 }
