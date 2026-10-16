@@ -2,7 +2,7 @@ package secao17.model.entities;
 
 import java.util.Objects;
 
-public class Product02 {
+public class Product02 implements Comparable<Product02> {
 
     private String name;
     private Double price;
@@ -38,5 +38,15 @@ public class Product02 {
     @Override
     public int hashCode() {
         return Objects.hash(name, price);
+    }
+
+    @Override
+    public String toString() {
+        return "Product [name=" + name + ", price=" + price + "]";
+    }
+
+    @Override
+    public int compareTo(Product02 other) {
+        return name.toUpperCase().compareTo(other.getName().toUpperCase());
     }
 }
