@@ -1,7 +1,7 @@
-package secao17.application;
+package secao17.set.application;
 
-import secao17.model.entities.Product;
-import secao17.model.service.CalculationService;
+import secao17.set.model.entities.Product;
+import secao17.set.model.service.CalculationService;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

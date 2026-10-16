@@ -1,9 +1,7 @@
-package secao17.application;
+package secao17.set.application;
 
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class Demo01 {
     public static void main(String[] args) {

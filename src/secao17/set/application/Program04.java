@@ -1,6 +1,6 @@
-package secao17.application;
+package secao17.set.application;
 
-import secao17.model.entities.Client;
+import secao17.set.model.entities.Client;
 
 public class Program04 {
     public static void main(String[] args) {

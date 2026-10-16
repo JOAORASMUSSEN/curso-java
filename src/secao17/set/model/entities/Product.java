@@ -1,4 +1,4 @@
-package secao17.model.entities;
+package secao17.set.model.entities;
 
 public class Product implements Comparable<Product> {
     private String name;

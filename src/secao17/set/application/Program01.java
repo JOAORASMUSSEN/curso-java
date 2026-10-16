@@ -1,6 +1,6 @@
-package secao17.application;
+package secao17.set.application;
 
-import secao17.model.service.PrintService;
+import secao17.set.model.service.PrintService;
 
 import java.util.Scanner;
 

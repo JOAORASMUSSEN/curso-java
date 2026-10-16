@@ -1,6 +1,6 @@
-package secao17.application;
+package secao17.set.application;
 
-import secao17.model.entities.LogEntry;
+import secao17.set.model.entities.LogEntry;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

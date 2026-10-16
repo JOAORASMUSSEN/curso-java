@@ -1,4 +1,4 @@
-package secao17.model.service;
+package secao17.set.model.service;
 
 import java.util.ArrayList;
 import java.util.List;

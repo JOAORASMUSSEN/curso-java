@@ -1,6 +1,6 @@
-package secao17.application;
+package secao17.set.application;
 
-import secao17.model.entities.Product02;
+import secao17.set.model.entities.Product02;
 
 import java.util.Set;
 import java.util.TreeSet;

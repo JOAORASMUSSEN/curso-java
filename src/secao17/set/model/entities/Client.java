@@ -1,4 +1,4 @@
-package secao17.model.entities;
+package secao17.set.model.entities;
 
 import java.util.Objects;
 

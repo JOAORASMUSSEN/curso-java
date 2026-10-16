@@ -1,4 +1,4 @@
-package secao17.application;
+package secao17.set.application;
 
 import java.util.HashSet;
 import java.util.Scanner;
